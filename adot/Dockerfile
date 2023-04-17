@@ -1,3 +1,3 @@
-FROM public.ecr.aws/aws-observability/aws-otel-collector:latest
-COconfig.yaml /etc/ecs/config.yaml
+FROM otel/opentelemetry-collector-contrib:latest
+COPY config.yaml /etc/ecs/config.yaml
 CMD ["--config=/etc/ecs/config.yaml"]
